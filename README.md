@@ -31,9 +31,28 @@ Stages 3-8 carry chapter references to _Modern Angular_ (Steyer) in their README
 3. **Drop into a chat per item.** Paste the box you're tackling, get it explained
    Angular-flavored, get quizzed before checking it off.
 
-## Formatting
+## Working a topic
+
+Each topic file doubles as a test file. Write your prediction as an assertion, then
+run it. A wrong mental model fails loudly instead of scrolling past in a log.
+
+```js
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+
+test('closures capture the variable, not its value', () => {
+  const counter = makeCounter();
+  assert.equal(counter(), 1);
+  assert.equal(counter(), 2);
+});
+```
 
 ```
-npm run format        # write
-npm run format:check  # verify
+npm test          # run every stage file
+npm run test:watch
+npm run lint      # eslint
+npm run format    # prettier
 ```
+
+`jsconfig.json` turns on `checkJs`, so the editor type-checks plain `.js` with no
+build step. `.vscode/` carries format-on-save and the two extension recommendations.

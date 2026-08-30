@@ -4,10 +4,16 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "test": "node --test \"stage-*/*.js\"",
+    "test:watch": "node --test --watch \"stage-*/*.js\"",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.9.1",
     "prettier": "^3.9.6"
   }
 }
