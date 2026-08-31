@@ -5,6 +5,7 @@
 - [ ] `01.2-class-fields-vs-variables.js`: Class fields vs variables (`this.x`)
 - [ ] `01.3-scope-boxes.js`: Scope, the simple version
 - [ ] `01.4-arrow-functions.js`: Arrow functions
+- [ ] `01.5-closures.js`: Closures
 - [ ] `02-this-binding.js`: this binding
 - [ ] `03-prototypes-and-prototypal-inheritance.js`: Prototypes & prototypal inheritance
 - [ ] `04-event-loop-call-stack-microtasks.js`: The event loop, call stack, microtasks vs macrotasks
