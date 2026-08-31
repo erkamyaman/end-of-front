@@ -1,4 +1,4 @@
-# Hydration
+# 02 Hydration
 
 <Badge type="info" text="todo" />
 `stage-5-rendering-models/02-hydration.js`

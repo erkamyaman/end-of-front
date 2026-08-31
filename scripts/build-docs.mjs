@@ -29,6 +29,7 @@ function stageTitle(dir) {
 function parseName(file) {
   const number = basename(file, '.js').match(/^([\d.]+)/)?.[1] ?? '0';
   return {
+    number,
     major: number.split('.')[0],
     order: Number(number),
     slug: basename(file, '.js'),
@@ -98,11 +99,13 @@ for (const dir of stageDirs) {
         groupWritten += 1;
       }
 
+      const numbered = `${parseName(file).number} ${name}`;
+
       if (index === 0) {
-        pageTitle = name;
-        lines.push(`# ${name}`, '');
+        pageTitle = numbered;
+        lines.push(`# ${numbered}`, '');
       } else {
-        lines.push(`## ${name}`, '');
+        lines.push(`## ${numbered}`, '');
       }
 
       lines.push(`<Badge type="${code ? 'tip' : 'info'}" text="${code ? 'written' : 'todo'}" />`);

@@ -1,4 +1,4 @@
-# i18n basics
+# 04 i18n basics
 
 <Badge type="info" text="todo" />
 `stage-8-angular-feature-areas/04-i18n-basics.js`

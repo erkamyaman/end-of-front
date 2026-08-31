@@ -1,4 +1,4 @@
-# One E2E test
+# 03 One E2E test
 
 <Badge type="info" text="todo" />
 `stage-6-testing/03-e2e-test.js`

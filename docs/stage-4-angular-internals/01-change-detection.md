@@ -1,4 +1,4 @@
-# Change detection
+# 01 Change detection
 
 <Badge type="info" text="todo" />
 `stage-4-angular-internals/01-change-detection.js`

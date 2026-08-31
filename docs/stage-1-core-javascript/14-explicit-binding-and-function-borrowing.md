@@ -1,4 +1,4 @@
-# Explicit binding & function borrowing
+# 14 Explicit binding & function borrowing
 
 <Badge type="info" text="todo" />
 `stage-1-core-javascript/14-explicit-binding-and-function-borrowing.js`

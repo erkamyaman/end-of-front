@@ -1,4 +1,4 @@
-# Web Components basics
+# 05 Web Components basics
 
 <Badge type="info" text="todo" />
 `stage-2.5-browser-dom-apis/05-web-components-basics.js`

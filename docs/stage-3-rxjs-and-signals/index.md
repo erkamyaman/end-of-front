@@ -4,7 +4,7 @@
 
 0 of 4 topics written.
 
-- [Observable vs Promise](/stage-3-rxjs-and-signals/01-observable-vs-promise) <Badge type="info" text="todo" />
-- [Core operators](/stage-3-rxjs-and-signals/02-core-operators) <Badge type="info" text="todo" />
-- [Subscription management & memory leaks](/stage-3-rxjs-and-signals/03-subscription-management-and-memory-leaks) <Badge type="info" text="todo" />
-- [Signals vs RxJS](/stage-3-rxjs-and-signals/04-signals-vs-rxjs) <Badge type="info" text="todo" />
+- [01 Observable vs Promise](/stage-3-rxjs-and-signals/01-observable-vs-promise) <Badge type="info" text="todo" />
+- [02 Core operators](/stage-3-rxjs-and-signals/02-core-operators) <Badge type="info" text="todo" />
+- [03 Subscription management & memory leaks](/stage-3-rxjs-and-signals/03-subscription-management-and-memory-leaks) <Badge type="info" text="todo" />
+- [04 Signals vs RxJS](/stage-3-rxjs-and-signals/04-signals-vs-rxjs) <Badge type="info" text="todo" />

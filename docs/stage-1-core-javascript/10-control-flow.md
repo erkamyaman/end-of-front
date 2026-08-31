@@ -1,4 +1,4 @@
-# Control flow
+# 10 Control flow
 
 <Badge type="info" text="todo" />
 `stage-1-core-javascript/10-control-flow.js`

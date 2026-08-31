@@ -1,4 +1,4 @@
-# Primitive data types
+# 15 Primitive data types
 
 <Badge type="info" text="todo" />
 `stage-1-core-javascript/15-primitive-data-types.js`

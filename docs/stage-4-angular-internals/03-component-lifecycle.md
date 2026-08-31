@@ -1,4 +1,4 @@
-# Component lifecycle
+# 03 Component lifecycle
 
 <Badge type="info" text="todo" />
 `stage-4-angular-internals/03-component-lifecycle.js`

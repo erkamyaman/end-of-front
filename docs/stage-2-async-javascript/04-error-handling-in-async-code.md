@@ -1,4 +1,4 @@
-# Error handling in async code
+# 04 Error handling in async code
 
 <Badge type="info" text="todo" />
 `stage-2-async-javascript/04-error-handling-in-async-code.js`

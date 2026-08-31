@@ -1,4 +1,4 @@
-# JSON & structured data
+# 09 JSON & structured data
 
 <Badge type="info" text="todo" />
 `stage-1-core-javascript/09-json-and-structured-data.js`

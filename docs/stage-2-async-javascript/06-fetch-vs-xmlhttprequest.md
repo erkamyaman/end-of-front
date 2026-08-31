@@ -1,4 +1,4 @@
-# Fetch vs XMLHttpRequest
+# 06 Fetch vs XMLHttpRequest
 
 <Badge type="info" text="todo" />
 `stage-2-async-javascript/06-fetch-vs-xmlhttprequest.js`

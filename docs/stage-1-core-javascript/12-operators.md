@@ -1,4 +1,4 @@
-# Operators
+# 12 Operators
 
 <Badge type="info" text="todo" />
 `stage-1-core-javascript/12-operators.js`

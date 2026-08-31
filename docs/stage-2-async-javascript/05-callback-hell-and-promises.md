@@ -1,4 +1,4 @@
-# Callback hell & why Promises replaced it
+# 05 Callback hell & why Promises replaced it
 
 <Badge type="info" text="todo" />
 `stage-2-async-javascript/05-callback-hell-and-promises.js`

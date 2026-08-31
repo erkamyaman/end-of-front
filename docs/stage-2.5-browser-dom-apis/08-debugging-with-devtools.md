@@ -1,4 +1,4 @@
-# Debugging with DevTools
+# 08 Debugging with DevTools
 
 <Badge type="info" text="todo" />
 `stage-2.5-browser-dom-apis/08-debugging-with-devtools.js`

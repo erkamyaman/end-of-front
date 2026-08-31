@@ -1,4 +1,4 @@
-# Memory management
+# 07 Memory management
 
 <Badge type="info" text="todo" />
 `stage-2.5-browser-dom-apis/07-memory-management.js`

@@ -1,4 +1,4 @@
-# Browser storage
+# 04 Browser storage
 
 <Badge type="info" text="todo" />
 `stage-2.5-browser-dom-apis/04-browser-storage.js`

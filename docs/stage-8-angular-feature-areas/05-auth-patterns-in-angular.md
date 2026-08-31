@@ -1,4 +1,4 @@
-# Auth patterns in Angular
+# 05 Auth patterns in Angular
 
 <Badge type="info" text="todo" />
 `stage-8-angular-feature-areas/05-auth-patterns-in-angular.js`

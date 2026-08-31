@@ -1,4 +1,4 @@
-# The event loop, call stack, microtasks vs macrotasks
+# 04 The event loop, call stack, microtasks vs macrotasks
 
 <Badge type="info" text="todo" />
 `stage-1-core-javascript/04-event-loop-call-stack-microtasks.js`

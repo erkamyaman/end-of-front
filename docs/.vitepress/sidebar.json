@@ -4,67 +4,67 @@
     "collapsed": true,
     "items": [
       {
-        "text": "Scope & closures",
+        "text": "01 Scope & closures",
         "link": "/stage-1-core-javascript/01-scope-and-closures"
       },
       {
-        "text": "this binding",
+        "text": "02 this binding",
         "link": "/stage-1-core-javascript/02-this-binding"
       },
       {
-        "text": "Prototypes & prototypal inheritance",
+        "text": "03 Prototypes & prototypal inheritance",
         "link": "/stage-1-core-javascript/03-prototypes-and-prototypal-inheritance"
       },
       {
-        "text": "The event loop, call stack, microtasks vs macrotasks",
+        "text": "04 The event loop, call stack, microtasks vs macrotasks",
         "link": "/stage-1-core-javascript/04-event-loop-call-stack-microtasks"
       },
       {
-        "text": "Hoisting & variable declarations",
+        "text": "05 Hoisting & variable declarations",
         "link": "/stage-1-core-javascript/05-hoisting-and-variable-declarations"
       },
       {
-        "text": "Type coercion vs casting",
+        "text": "06 Type coercion vs casting",
         "link": "/stage-1-core-javascript/06-type-coercion-vs-casting"
       },
       {
-        "text": "Variable naming rules & scope levels",
+        "text": "07 Variable naming rules & scope levels",
         "link": "/stage-1-core-javascript/07-variable-naming-and-scope-levels"
       },
       {
-        "text": "typeof operator & built-in objects",
+        "text": "08 typeof operator & built-in objects",
         "link": "/stage-1-core-javascript/08-typeof-and-built-in-objects"
       },
       {
-        "text": "JSON & structured data",
+        "text": "09 JSON & structured data",
         "link": "/stage-1-core-javascript/09-json-and-structured-data"
       },
       {
-        "text": "Control flow",
+        "text": "10 Control flow",
         "link": "/stage-1-core-javascript/10-control-flow"
       },
       {
-        "text": "Loops & iteration",
+        "text": "11 Loops & iteration",
         "link": "/stage-1-core-javascript/11-loops-and-iteration"
       },
       {
-        "text": "Operators",
+        "text": "12 Operators",
         "link": "/stage-1-core-javascript/12-operators"
       },
       {
-        "text": "Function parameter patterns",
+        "text": "13 Function parameter patterns",
         "link": "/stage-1-core-javascript/13-function-parameter-patterns"
       },
       {
-        "text": "Explicit binding & function borrowing",
+        "text": "14 Explicit binding & function borrowing",
         "link": "/stage-1-core-javascript/14-explicit-binding-and-function-borrowing"
       },
       {
-        "text": "Primitive data types",
+        "text": "15 Primitive data types",
         "link": "/stage-1-core-javascript/15-primitive-data-types"
       },
       {
-        "text": "Recursion",
+        "text": "16 Recursion",
         "link": "/stage-1-core-javascript/16-recursion"
       }
     ]
@@ -74,27 +74,27 @@
     "collapsed": true,
     "items": [
       {
-        "text": "Callbacks",
+        "text": "01 Callbacks",
         "link": "/stage-2-async-javascript/01-callbacks"
       },
       {
-        "text": "Promises",
+        "text": "02 Promises",
         "link": "/stage-2-async-javascript/02-promises"
       },
       {
-        "text": "async/await",
+        "text": "03 async/await",
         "link": "/stage-2-async-javascript/03-async-await"
       },
       {
-        "text": "Error handling in async code",
+        "text": "04 Error handling in async code",
         "link": "/stage-2-async-javascript/04-error-handling-in-async-code"
       },
       {
-        "text": "Callback hell & why Promises replaced it",
+        "text": "05 Callback hell & why Promises replaced it",
         "link": "/stage-2-async-javascript/05-callback-hell-and-promises"
       },
       {
-        "text": "Fetch vs XMLHttpRequest",
+        "text": "06 Fetch vs XMLHttpRequest",
         "link": "/stage-2-async-javascript/06-fetch-vs-xmlhttprequest"
       }
     ]
@@ -104,35 +104,35 @@
     "collapsed": true,
     "items": [
       {
-        "text": "DOM manipulation basics",
+        "text": "01 DOM manipulation basics",
         "link": "/stage-2.5-browser-dom-apis/01-dom-manipulation-basics"
       },
       {
-        "text": "fetch and the native request/response cycle",
+        "text": "02 fetch and the native request/response cycle",
         "link": "/stage-2.5-browser-dom-apis/02-fetch-and-request-response-cycle"
       },
       {
-        "text": "Events & event delegation",
+        "text": "03 Events & event delegation",
         "link": "/stage-2.5-browser-dom-apis/03-events-and-event-delegation"
       },
       {
-        "text": "Browser storage",
+        "text": "04 Browser storage",
         "link": "/stage-2.5-browser-dom-apis/04-browser-storage"
       },
       {
-        "text": "Web Components basics",
+        "text": "05 Web Components basics",
         "link": "/stage-2.5-browser-dom-apis/05-web-components-basics"
       },
       {
-        "text": "Strict mode",
+        "text": "06 Strict mode",
         "link": "/stage-2.5-browser-dom-apis/06-strict-mode"
       },
       {
-        "text": "Memory management",
+        "text": "07 Memory management",
         "link": "/stage-2.5-browser-dom-apis/07-memory-management"
       },
       {
-        "text": "Debugging with DevTools",
+        "text": "08 Debugging with DevTools",
         "link": "/stage-2.5-browser-dom-apis/08-debugging-with-devtools"
       }
     ]
@@ -142,19 +142,19 @@
     "collapsed": true,
     "items": [
       {
-        "text": "Classes",
+        "text": "01 Classes",
         "link": "/stage-2.7-modern-js-structures/01-classes"
       },
       {
-        "text": "Modules (ESM vs CommonJS)",
+        "text": "02 Modules (ESM vs CommonJS)",
         "link": "/stage-2.7-modern-js-structures/02-modules-esm-vs-commonjs"
       },
       {
-        "text": "Iterators & Generators",
+        "text": "03 Iterators & Generators",
         "link": "/stage-2.7-modern-js-structures/03-iterators-and-generators"
       },
       {
-        "text": "Map/Set/WeakMap/WeakSet & typed arrays",
+        "text": "04 Map/Set/WeakMap/WeakSet & typed arrays",
         "link": "/stage-2.7-modern-js-structures/04-map-set-weakmap-weakset-typed-arrays"
       }
     ]
@@ -164,19 +164,19 @@
     "collapsed": true,
     "items": [
       {
-        "text": "Observable vs Promise",
+        "text": "01 Observable vs Promise",
         "link": "/stage-3-rxjs-and-signals/01-observable-vs-promise"
       },
       {
-        "text": "Core operators",
+        "text": "02 Core operators",
         "link": "/stage-3-rxjs-and-signals/02-core-operators"
       },
       {
-        "text": "Subscription management & memory leaks",
+        "text": "03 Subscription management & memory leaks",
         "link": "/stage-3-rxjs-and-signals/03-subscription-management-and-memory-leaks"
       },
       {
-        "text": "Signals vs RxJS",
+        "text": "04 Signals vs RxJS",
         "link": "/stage-3-rxjs-and-signals/04-signals-vs-rxjs"
       }
     ]
@@ -186,15 +186,15 @@
     "collapsed": true,
     "items": [
       {
-        "text": "Change detection",
+        "text": "01 Change detection",
         "link": "/stage-4-angular-internals/01-change-detection"
       },
       {
-        "text": "Dependency Injection",
+        "text": "02 Dependency Injection",
         "link": "/stage-4-angular-internals/02-dependency-injection"
       },
       {
-        "text": "Component lifecycle",
+        "text": "03 Component lifecycle",
         "link": "/stage-4-angular-internals/03-component-lifecycle"
       }
     ]
@@ -204,19 +204,19 @@
     "collapsed": true,
     "items": [
       {
-        "text": "Semantic HTML",
+        "text": "01 Semantic HTML",
         "link": "/stage-4.5-accessibility/01-semantic-html"
       },
       {
-        "text": "ARIA basics",
+        "text": "02 ARIA basics",
         "link": "/stage-4.5-accessibility/02-aria-basics"
       },
       {
-        "text": "Keyboard navigation & focus management",
+        "text": "03 Keyboard navigation & focus management",
         "link": "/stage-4.5-accessibility/03-keyboard-navigation-and-focus-management"
       },
       {
-        "text": "One accessibility audit",
+        "text": "04 One accessibility audit",
         "link": "/stage-4.5-accessibility/04-accessibility-audit"
       }
     ]
@@ -226,15 +226,15 @@
     "collapsed": true,
     "items": [
       {
-        "text": "CSR vs SSR vs SSG vs ISR",
+        "text": "01 CSR vs SSR vs SSG vs ISR",
         "link": "/stage-5-rendering-models/01-csr-vs-ssr-vs-ssg-vs-isr"
       },
       {
-        "text": "Hydration",
+        "text": "02 Hydration",
         "link": "/stage-5-rendering-models/02-hydration"
       },
       {
-        "text": "Angular SSR (Angular Universal)",
+        "text": "03 Angular SSR (Angular Universal)",
         "link": "/stage-5-rendering-models/03-angular-ssr"
       }
     ]
@@ -244,15 +244,15 @@
     "collapsed": true,
     "items": [
       {
-        "text": "Unit testing basics",
+        "text": "01 Unit testing basics",
         "link": "/stage-6-testing/01-unit-testing-basics"
       },
       {
-        "text": "Testing async code",
+        "text": "02 Testing async code",
         "link": "/stage-6-testing/02-testing-async-code"
       },
       {
-        "text": "One E2E test",
+        "text": "03 One E2E test",
         "link": "/stage-6-testing/03-e2e-test"
       }
     ]
@@ -262,15 +262,15 @@
     "collapsed": true,
     "items": [
       {
-        "text": "State management patterns",
+        "text": "01 State management patterns",
         "link": "/stage-7-architecture/01-state-management-patterns"
       },
       {
-        "text": "Folder/module structure at scale",
+        "text": "02 Folder/module structure at scale",
         "link": "/stage-7-architecture/02-folder-and-module-structure-at-scale"
       },
       {
-        "text": "Monorepo basics",
+        "text": "03 Monorepo basics",
         "link": "/stage-7-architecture/03-monorepo-basics"
       }
     ]
@@ -280,27 +280,27 @@
     "collapsed": true,
     "items": [
       {
-        "text": "Router deep-dive",
+        "text": "01 Router deep-dive",
         "link": "/stage-8-angular-feature-areas/01-router-deep-dive"
       },
       {
-        "text": "Custom directives & structural directives",
+        "text": "02 Custom directives & structural directives",
         "link": "/stage-8-angular-feature-areas/02-custom-and-structural-directives"
       },
       {
-        "text": "App/route initialization & guards",
+        "text": "03 App/route initialization & guards",
         "link": "/stage-8-angular-feature-areas/03-app-route-initialization-and-guards"
       },
       {
-        "text": "i18n basics",
+        "text": "04 i18n basics",
         "link": "/stage-8-angular-feature-areas/04-i18n-basics"
       },
       {
-        "text": "Auth patterns in Angular",
+        "text": "05 Auth patterns in Angular",
         "link": "/stage-8-angular-feature-areas/05-auth-patterns-in-angular"
       },
       {
-        "text": "(skip unless curious) Ch. 13",
+        "text": "06 (skip unless curious) Ch. 13",
         "link": "/stage-8-angular-feature-areas/06-agentic-ui-optional"
       }
     ]

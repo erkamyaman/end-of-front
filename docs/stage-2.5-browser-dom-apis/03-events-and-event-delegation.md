@@ -1,4 +1,4 @@
-# Events & event delegation
+# 03 Events & event delegation
 
 <Badge type="info" text="todo" />
 `stage-2.5-browser-dom-apis/03-events-and-event-delegation.js`

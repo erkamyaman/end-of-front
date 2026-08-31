@@ -1,4 +1,4 @@
-# Iterators & Generators
+# 03 Iterators & Generators
 
 <Badge type="info" text="todo" />
 `stage-2.7-modern-js-structures/03-iterators-and-generators.js`

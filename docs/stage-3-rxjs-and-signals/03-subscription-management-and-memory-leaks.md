@@ -1,4 +1,4 @@
-# Subscription management & memory leaks
+# 03 Subscription management & memory leaks
 
 <Badge type="info" text="todo" />
 `stage-3-rxjs-and-signals/03-subscription-management-and-memory-leaks.js`

@@ -1,4 +1,4 @@
-# Prototypes & prototypal inheritance
+# 03 Prototypes & prototypal inheritance
 
 <Badge type="info" text="todo" />
 `stage-1-core-javascript/03-prototypes-and-prototypal-inheritance.js`

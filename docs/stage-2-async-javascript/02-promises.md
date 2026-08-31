@@ -1,4 +1,4 @@
-# Promises
+# 02 Promises
 
 <Badge type="info" text="todo" />
 `stage-2-async-javascript/02-promises.js`

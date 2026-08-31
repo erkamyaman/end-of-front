@@ -1,4 +1,4 @@
-# Keyboard navigation & focus management
+# 03 Keyboard navigation & focus management
 
 <Badge type="info" text="todo" />
 `stage-4.5-accessibility/03-keyboard-navigation-and-focus-management.js`

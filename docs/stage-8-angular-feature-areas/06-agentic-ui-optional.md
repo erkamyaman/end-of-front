@@ -1,4 +1,4 @@
-# (skip unless curious) Ch. 13
+# 06 (skip unless curious) Ch. 13
 
 <Badge type="info" text="todo" />
 `stage-8-angular-feature-areas/06-agentic-ui-optional.js`

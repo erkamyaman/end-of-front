@@ -1,4 +1,4 @@
-# Map/Set/WeakMap/WeakSet & typed arrays
+# 04 Map/Set/WeakMap/WeakSet & typed arrays
 
 <Badge type="info" text="todo" />
 `stage-2.7-modern-js-structures/04-map-set-weakmap-weakset-typed-arrays.js`

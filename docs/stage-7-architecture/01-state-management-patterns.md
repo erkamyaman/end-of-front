@@ -1,4 +1,4 @@
-# State management patterns
+# 01 State management patterns
 
 <Badge type="info" text="todo" />
 `stage-7-architecture/01-state-management-patterns.js`

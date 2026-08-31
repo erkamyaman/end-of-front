@@ -1,4 +1,4 @@
-# Strict mode
+# 06 Strict mode
 
 <Badge type="info" text="todo" />
 `stage-2.5-browser-dom-apis/06-strict-mode.js`

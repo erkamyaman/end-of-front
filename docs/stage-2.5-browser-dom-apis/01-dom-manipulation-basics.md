@@ -1,4 +1,4 @@
-# DOM manipulation basics
+# 01 DOM manipulation basics
 
 <Badge type="info" text="todo" />
 `stage-2.5-browser-dom-apis/01-dom-manipulation-basics.js`

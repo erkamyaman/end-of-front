@@ -1,4 +1,4 @@
-# Observable vs Promise
+# 01 Observable vs Promise
 
 <Badge type="info" text="todo" />
 `stage-3-rxjs-and-signals/01-observable-vs-promise.js`

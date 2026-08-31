@@ -1,4 +1,4 @@
-# Scope & closures
+# 01 Scope & closures
 
 <Badge type="tip" text="written" />
 `stage-1-core-javascript/01-scope-and-closures.js`
@@ -53,7 +53,7 @@ function outerFunction() {
 outerFunction();
 ```
 
-## var / let / const
+## 01.1 var / let / const
 
 <Badge type="tip" text="written" />
 `stage-1-core-javascript/01.1-var-let-const.js`
@@ -124,7 +124,7 @@ function tdzDemo() {
 tdzDemo();
 ```
 
-## Class fields vs variables
+## 01.2 Class fields vs variables
 
 <Badge type="tip" text="written" />
 `stage-1-core-javascript/01.2-class-fields-vs-variables.js`
@@ -224,7 +224,7 @@ console.log((() => a.increment()).call(null).count); // works: arrow closes over
  */
 ```
 
-## Scope, the simple version
+## 01.3 Scope, the simple version
 
 <Badge type="tip" text="written" />
 `stage-1-core-javascript/01.3-scope-boxes.js`

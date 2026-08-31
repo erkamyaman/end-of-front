@@ -1,4 +1,4 @@
-# Classes
+# 01 Classes
 
 <Badge type="tip" text="written" />
 `stage-2.7-modern-js-structures/01-classes.js`

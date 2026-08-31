@@ -1,4 +1,4 @@
-# Core operators
+# 02 Core operators
 
 <Badge type="info" text="todo" />
 `stage-3-rxjs-and-signals/02-core-operators.js`

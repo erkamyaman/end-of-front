@@ -1,4 +1,4 @@
-# Function parameter patterns
+# 13 Function parameter patterns
 
 <Badge type="info" text="todo" />
 `stage-1-core-javascript/13-function-parameter-patterns.js`

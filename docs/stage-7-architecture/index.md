@@ -4,6 +4,6 @@
 
 0 of 3 topics written.
 
-- [State management patterns](/stage-7-architecture/01-state-management-patterns) <Badge type="info" text="todo" />
-- [Folder/module structure at scale](/stage-7-architecture/02-folder-and-module-structure-at-scale) <Badge type="info" text="todo" />
-- [Monorepo basics](/stage-7-architecture/03-monorepo-basics) <Badge type="info" text="todo" />
+- [01 State management patterns](/stage-7-architecture/01-state-management-patterns) <Badge type="info" text="todo" />
+- [02 Folder/module structure at scale](/stage-7-architecture/02-folder-and-module-structure-at-scale) <Badge type="info" text="todo" />
+- [03 Monorepo basics](/stage-7-architecture/03-monorepo-basics) <Badge type="info" text="todo" />

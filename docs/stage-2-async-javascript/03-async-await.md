@@ -1,4 +1,4 @@
-# async/await
+# 03 async/await
 
 <Badge type="info" text="todo" />
 `stage-2-async-javascript/03-async-await.js`

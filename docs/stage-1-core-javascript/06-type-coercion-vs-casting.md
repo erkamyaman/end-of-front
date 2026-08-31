@@ -1,4 +1,4 @@
-# Type coercion vs casting
+# 06 Type coercion vs casting
 
 <Badge type="info" text="todo" />
 `stage-1-core-javascript/06-type-coercion-vs-casting.js`

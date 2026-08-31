@@ -1,4 +1,4 @@
-# fetch and the native request/response cycle
+# 02 fetch and the native request/response cycle
 
 <Badge type="info" text="todo" />
 `stage-2.5-browser-dom-apis/02-fetch-and-request-response-cycle.js`

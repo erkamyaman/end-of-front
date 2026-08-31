@@ -1,4 +1,4 @@
-# Recursion
+# 16 Recursion
 
 <Badge type="info" text="todo" />
 `stage-1-core-javascript/16-recursion.js`

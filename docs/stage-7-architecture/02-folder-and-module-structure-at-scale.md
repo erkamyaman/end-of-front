@@ -1,4 +1,4 @@
-# Folder/module structure at scale
+# 02 Folder/module structure at scale
 
 <Badge type="info" text="todo" />
 `stage-7-architecture/02-folder-and-module-structure-at-scale.js`

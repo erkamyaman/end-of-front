@@ -1,4 +1,4 @@
-# Monorepo basics
+# 03 Monorepo basics
 
 <Badge type="info" text="todo" />
 `stage-7-architecture/03-monorepo-basics.js`

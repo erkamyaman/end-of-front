@@ -1,4 +1,4 @@
-# Signals vs RxJS
+# 04 Signals vs RxJS
 
 <Badge type="info" text="todo" />
 `stage-3-rxjs-and-signals/04-signals-vs-rxjs.js`

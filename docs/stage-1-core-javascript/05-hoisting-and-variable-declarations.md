@@ -1,4 +1,4 @@
-# Hoisting & variable declarations
+# 05 Hoisting & variable declarations
 
 <Badge type="info" text="todo" />
 `stage-1-core-javascript/05-hoisting-and-variable-declarations.js`

@@ -1,4 +1,4 @@
-# Testing async code
+# 02 Testing async code
 
 <Badge type="info" text="todo" />
 `stage-6-testing/02-testing-async-code.js`

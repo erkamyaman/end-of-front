@@ -1,4 +1,4 @@
-# Callbacks
+# 01 Callbacks
 
 <Badge type="info" text="todo" />
 `stage-2-async-javascript/01-callbacks.js`

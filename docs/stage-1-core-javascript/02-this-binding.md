@@ -1,4 +1,4 @@
-# this binding
+# 02 this binding
 
 <Badge type="info" text="todo" />
 `stage-1-core-javascript/02-this-binding.js`

@@ -1,4 +1,4 @@
-# Variable naming rules & scope levels
+# 07 Variable naming rules & scope levels
 
 <Badge type="info" text="todo" />
 `stage-1-core-javascript/07-variable-naming-and-scope-levels.js`

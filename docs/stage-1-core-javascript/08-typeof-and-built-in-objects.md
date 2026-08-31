@@ -1,4 +1,4 @@
-# typeof operator & built-in objects
+# 08 typeof operator & built-in objects
 
 <Badge type="info" text="todo" />
 `stage-1-core-javascript/08-typeof-and-built-in-objects.js`
