@@ -1,6 +1,8 @@
 # Stage 1 — Core JavaScript (the stuff Angular hides from you)
 
 - [ ] `01-scope-and-closures.js` — Scope & closures
+- [ ] `01.1-var-let-const.js` — var / let / const
+- [ ] `01.2-class-fields-vs-variables.js` — Class fields vs variables (`this.x`)
 - [ ] `02-this-binding.js` — this binding
 - [ ] `03-prototypes-and-prototypal-inheritance.js` — Prototypes & prototypal inheritance
 - [ ] `04-event-loop-call-stack-microtasks.js` — The event loop, call stack, microtasks vs macrotasks
