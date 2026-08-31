@@ -8,6 +8,7 @@
 ![Node.js](https://img.shields.io/badge/Node.js-5FA04E?logo=nodedotjs&logoColor=fff)
 ![Prettier](https://img.shields.io/badge/Prettier-F7B93E?logo=prettier&logoColor=000)
 ![ESLint](https://img.shields.io/badge/ESLint-4B32C3?logo=eslint&logoColor=fff)
+![VitePress](https://img.shields.io/badge/VitePress-5C73E7?logo=vitepress&logoColor=fff)
 
 **Read it as a site: [erkamyaman.github.io/end-of-front](https://erkamyaman.github.io/end-of-front/)**
 
@@ -77,8 +78,14 @@ Everything in `stage-*/` is published to
 [erkamyaman.github.io/end-of-front](https://erkamyaman.github.io/end-of-front/) with a
 sidebar, search, and syntax highlighting.
 
-`scripts/build-docs.mjs` reads each topic file, takes the header comment as prose and
-the code beneath it as a highlighted block, and writes one page per numbered topic.
+The pipeline has two halves. `scripts/build-docs.mjs` is a dependency-free Node script
+that reads each topic file, takes the header comment as prose and the code beneath it
+as a highlighted block, and writes markdown into `docs/`.
+[VitePress](https://vitepress.dev) then renders that markdown into the site: sidebar,
+local search, dark mode, and Shiki highlighting. `npm run docs:build` runs both in
+order, and GitHub Actions does the same on every push.
+
+The generator writes one page per numbered topic.
 Sub-topics share their parent's page, so `01.1` and `01.2` are sections on the `01`
 page rather than pages of their own. Each stage gets an index listing its topics.
 The `.js` files stay the single source of truth, so the docs can't drift from the
