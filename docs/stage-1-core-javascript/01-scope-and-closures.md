@@ -330,3 +330,14 @@ function makeCounter() {
 const next = makeCounter();
 console.log(next(), next(), next()); // 1 2 3
 ```
+
+## 01.4 Arrow functions
+
+<Badge type="info" text="todo" />
+`stage-1-core-javascript/01.4-arrow-functions.js`
+
+shorter syntax, and no `this` of their own.
+
+An arrow doesn't bind its own `this`, `arguments`, or `super`. It closes over whatever `this` was where it was written, which makes it a scope topic as much as a syntax one.
+
+Angular tie-in: this is why `setTimeout(() => this.tick(), 1000)` works in a component while `setTimeout(this.tick, 1000)` loses `this` and throws.

@@ -1,6 +1,6 @@
 # Stage 1: Core JavaScript (the stuff Angular hides from you)
 
-4 of 19 topics written.
+4 of 20 topics written.
 
 - [01 Scope & closures](/stage-1-core-javascript/01-scope-and-closures)
 - [02 this binding](/stage-1-core-javascript/02-this-binding) <Badge type="info" text="todo" />

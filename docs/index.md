@@ -6,7 +6,7 @@ hero:
   tagline: Having fun with JS/TS and their connection with Angular
 features:
   - title: Stage 1 Core JavaScript (the stuff Angular hides from you)
-    details: 4 of 19 topics written
+    details: 4 of 20 topics written
     link: /stage-1-core-javascript/
   - title: Stage 2 Asynchronous JavaScript
     details: 0 of 6 topics written
@@ -40,4 +40,4 @@ features:
     link: /stage-8-angular-feature-areas/
 ---
 
-**5 of 63 topics written.**
+**5 of 64 topics written.**
