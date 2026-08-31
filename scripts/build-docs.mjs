@@ -1,4 +1,4 @@
-import { readdirSync, readFileSync, writeFileSync, mkdirSync, rmSync } from 'node:fs';
+import { readdirSync, readFileSync, writeFileSync, mkdirSync, rmSync, existsSync } from 'node:fs';
 import { join, basename } from 'node:path';
 
 const ROOT = new URL('..', import.meta.url).pathname;
@@ -12,12 +12,6 @@ function stageNumber(dir) {
   return Number(dir.match(/^stage-([\d.]+)/)[1]);
 }
 
-function stageTitle(dir) {
-  const readme = tryRead(join(ROOT, dir, 'README.md'));
-  const heading = readme?.match(/^#\s+(.+)$/m);
-  return heading ? heading[1].trim() : dir;
-}
-
 function tryRead(path) {
   try {
     return readFileSync(path, 'utf8');
@@ -26,8 +20,19 @@ function tryRead(path) {
   }
 }
 
-function fileNumber(name) {
-  return Number(basename(name).match(/^([\d.]+)/)?.[1] ?? 0);
+function stageTitle(dir) {
+  const heading = tryRead(join(ROOT, dir, 'README.md'))?.match(/^#\s+(.+)$/m);
+  return heading ? heading[1].trim() : dir;
+}
+
+/** '01.2-class-fields-vs-variables.js' -> { major: '01', order: 1.2, slug: '...' } */
+function parseName(file) {
+  const number = basename(file, '.js').match(/^([\d.]+)/)?.[1] ?? '0';
+  return {
+    major: number.split('.')[0],
+    order: Number(number),
+    slug: basename(file, '.js'),
+  };
 }
 
 /** Split a topic file into its leading block comment and the code that follows. */
@@ -44,61 +49,95 @@ function splitTopic(source) {
   return { prose, code: source.slice(match[0].length).trim() };
 }
 
-/** A file with no code under its header is a topic not started yet. */
-function statusOf(code) {
-  return code.length > 0 ? 'done' : 'todo';
-}
-
-for (const stale of readdirSync(OUT, { withFileTypes: true }).filter((e) => e.isFile())) {
-  rmSync(join(OUT, stale.name));
+for (const entry of readdirSync(OUT, { withFileTypes: true })) {
+  if (entry.name === '.vitepress') continue;
+  rmSync(join(OUT, entry.name), { recursive: true, force: true });
 }
 mkdirSync(join(OUT, '.vitepress'), { recursive: true });
 
-const index = [];
+const sidebar = [];
+const home = [];
 let totalTopics = 0;
-let startedTopics = 0;
+let writtenTopics = 0;
 
 for (const dir of stageDirs) {
+  const title = stageTitle(dir);
   const files = readdirSync(join(ROOT, dir))
     .filter((f) => f.endsWith('.js'))
-    .sort((a, b) => fileNumber(a) - fileNumber(b));
+    .sort((a, b) => parseName(a).order - parseName(b).order);
 
-  const title = stageTitle(dir);
-  const started = [];
-  const lines = [`# ${title}`, ''];
-
-  const readme = tryRead(join(ROOT, dir, 'README.md')) ?? '';
-  const book = readme.match(/^\*\*Book:\*\*([\s\S]*?)(?=\n\n)/m);
-  if (book) lines.push(`> **Book:**${book[1].trim().replace(/\n/g, ' ')}`, '');
-
+  /** Group each numbered topic with its sub-topics: 01, 01.1, 01.2 share one page. */
+  const groups = new Map();
   for (const file of files) {
-    const { prose, code } = splitTopic(readFileSync(join(ROOT, dir, file), 'utf8'));
-    const status = statusOf(code);
-
-    totalTopics += 1;
-    if (status === 'done') {
-      startedTopics += 1;
-      started.push(file);
-    }
-
-    const [heading, ...rest] = prose.split('\n\n');
-
-    lines.push(`## ${heading.replace(/\n/g, ' ').trim()}`, '');
-    lines.push(`<Badge type="${status === 'done' ? 'tip' : 'info'}" text="${status}" />`, '');
-    lines.push(`\`${file}\``, '');
-
-    for (const para of rest) lines.push(para.replace(/\n/g, ' ').trim(), '');
-
-    if (code) lines.push('```js', code, '```', '');
+    const { major } = parseName(file);
+    if (!groups.has(major)) groups.set(major, []);
+    groups.get(major).push(file);
   }
 
-  const slug = dir.replace(/^stage-/, 'stage-');
-  writeFileSync(join(OUT, `${slug}.md`), lines.join('\n'));
+  mkdirSync(join(OUT, dir), { recursive: true });
 
-  index.push({ slug, title, total: files.length, started: started.length });
+  const items = [];
+  let stageWritten = 0;
+
+  for (const [, group] of groups) {
+    const pageSlug = parseName(group[0]).slug;
+    const lines = [];
+    let pageTitle = pageSlug;
+    let groupWritten = 0;
+
+    for (const [index, file] of group.entries()) {
+      const { prose, code } = splitTopic(readFileSync(join(ROOT, dir, file), 'utf8'));
+      const [headingRaw, ...rest] = prose.split('\n\n');
+      const heading = headingRaw.replace(/\n/g, ' ').trim();
+      const [name, ...summary] = heading.split(/:\s/);
+
+      totalTopics += 1;
+      if (code) {
+        writtenTopics += 1;
+        stageWritten += 1;
+        groupWritten += 1;
+      }
+
+      if (index === 0) {
+        pageTitle = name;
+        lines.push(`# ${name}`, '');
+      } else {
+        lines.push(`## ${name}`, '');
+      }
+
+      lines.push(`<Badge type="${code ? 'tip' : 'info'}" text="${code ? 'written' : 'todo'}" />`);
+      lines.push(`\`${dir}/${file}\``, '');
+
+      if (summary.length) lines.push(summary.join(': '), '');
+      for (const para of rest) lines.push(para.replace(/\n/g, ' ').trim(), '');
+
+      if (code) lines.push('```js', code, '```', '');
+    }
+
+    writeFileSync(join(OUT, dir, `${pageSlug}.md`), lines.join('\n'));
+    items.push({ text: pageTitle, link: `/${dir}/${pageSlug}`, written: groupWritten > 0 });
+  }
+
+  const book = tryRead(join(ROOT, dir, 'README.md'))?.match(/^\*\*Book:\*\*([\s\S]*?)(?=\n\n)/m);
+  const index = [`# ${title}`, ''];
+  if (book) index.push(`> **Book:**${book[1].trim().replace(/\n/g, ' ')}`, '');
+  index.push(`${stageWritten} of ${files.length} topics written.`, '');
+  for (const item of items) {
+    index.push(
+      `- [${item.text}](${item.link})${item.written ? '' : ' <Badge type="info" text="todo" />'}`,
+    );
+  }
+  writeFileSync(join(OUT, dir, 'index.md'), index.join('\n') + '\n');
+
+  sidebar.push({
+    text: title,
+    collapsed: true,
+    items: items.map(({ text, link }) => ({ text, link })),
+  });
+  home.push({ dir, title, total: files.length, written: stageWritten });
 }
 
-const home = [
+const homePage = [
   '---',
   'layout: home',
   'hero:',
@@ -106,27 +145,24 @@ const home = [
   '  text: JS/TS fundamentals, Angular-flavoured',
   '  tagline: Having fun with JS/TS and their connection with Angular',
   'features:',
-  ...index.map((s) =>
+  ...home.map((s) =>
     [
       `  - title: ${s.title.replace(/:/g, '')}`,
-      `    details: ${s.started} of ${s.total} topics written`,
-      `    link: /${s.slug}`,
+      `    details: ${s.written} of ${s.total} topics written`,
+      `    link: /${s.dir}/`,
     ].join('\n'),
   ),
   '---',
   '',
-  `**${startedTopics} of ${totalTopics} topics written.**`,
+  `**${writtenTopics} of ${totalTopics} topics written.**`,
   '',
 ].join('\n');
 
-writeFileSync(join(OUT, 'index.md'), home);
-writeFileSync(
-  join(OUT, '.vitepress', 'sidebar.json'),
-  JSON.stringify(
-    index.map((s) => ({ text: s.title, link: `/${s.slug}` })),
-    null,
-    2,
-  ),
-);
+writeFileSync(join(OUT, 'index.md'), homePage);
+writeFileSync(join(OUT, '.vitepress', 'sidebar.json'), JSON.stringify(sidebar, null, 2));
 
-console.log(`docs: ${index.length} stages, ${startedTopics}/${totalTopics} topics written`);
+if (!existsSync(join(OUT, '.vitepress', 'config.mjs'))) throw new Error('missing vitepress config');
+
+console.log(
+  `docs: ${sidebar.length} stages, ${sidebar.reduce((n, s) => n + s.items.length, 0)} pages, ${writtenTopics}/${totalTopics} topics written`,
+);

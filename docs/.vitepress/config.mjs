@@ -10,7 +10,7 @@ export default {
   lastUpdated: true,
   themeConfig: {
     nav: [
-      { text: 'Stages', link: sidebar[0].link },
+      { text: 'Stages', link: sidebar[0].items[0].link },
       { text: 'GitHub', link: 'https://github.com/erkamyaman/end-of-front' },
     ],
     sidebar: [{ text: 'Stages', items: sidebar }],

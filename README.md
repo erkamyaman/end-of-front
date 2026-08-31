@@ -78,7 +78,9 @@ Everything in `stage-*/` is published to
 sidebar, search, and syntax highlighting.
 
 `scripts/build-docs.mjs` reads each topic file, takes the header comment as prose and
-the code beneath it as a highlighted block, and writes one markdown page per stage.
+the code beneath it as a highlighted block, and writes one page per numbered topic.
+Sub-topics share their parent's page, so `01.1` and `01.2` are sections on the `01`
+page rather than pages of their own. Each stage gets an index listing its topics.
 The `.js` files stay the single source of truth, so the docs can't drift from the
 code. A file with code under its header counts as written; one with only the header
 is still a todo, and the homepage tallies both.

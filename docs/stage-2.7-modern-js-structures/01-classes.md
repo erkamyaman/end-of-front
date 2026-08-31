@@ -1,10 +1,9 @@
-# Stage 2.7: Modern JS Structures
+# Classes
 
-## Classes: fields, private #members, extends/super.
+<Badge type="tip" text="written" />
+`stage-2.7-modern-js-structures/01-classes.js`
 
-<Badge type="tip" text="done" />
-
-`01-classes.js`
+fields, private #members, extends/super.
 
 Angular tie-in: every Angular component and service you write is a class. This is the syntax layer directly under decorators like @Component.
 
@@ -121,27 +120,3 @@ console.log(new Derived('a', 'b').describe()); // Derived(Base(a), b)
  * can go years without needing either.
  */
 ```
-
-## Modules (ESM vs CommonJS): import/export vs require.
-
-<Badge type="info" text="todo" />
-
-`02-modules-esm-vs-commonjs.js`
-
-Angular tie-in: why tree-shaking works at all in an Angular production build, and why standalone components/lazy-loaded routes rely on clean ESM boundaries.
-
-## Iterators & Generators: function*, yield, what makes something iterable.
-
-<Badge type="info" text="todo" />
-
-`03-iterators-and-generators.js`
-
-Angular tie-in: niche in everyday Angular work, but async generators are part of how some newer streaming APIs behave. Good to recognize even if you rarely write one.
-
-## Map/Set/WeakMap/WeakSet & typed arrays: when a plain object/array isn't right.
-
-<Badge type="info" text="todo" />
-
-`04-map-set-weakmap-weakset-typed-arrays.js`
-
-Angular tie-in: Map for keyed caches in a service (e.g. caching API responses by ID) instead of an object with string-keyed lookups.
