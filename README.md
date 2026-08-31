@@ -22,14 +22,17 @@ Angular tie-in. Write the code by hand.
 
 Stages 3-8 carry chapter references to _Modern Angular_ (Steyer) in their READMEs.
 
-## Rules for not falling off this again
+## Having fun with JS/TS and their connection with Angular
 
-1. **No stage-skipping ahead.** Stage 2 (async) genuinely needs Stage 1 (event loop)
-   or it won't stick.
-2. **One box at a time is a win.** This isn't a race. Steady progress at your own pace
-   beats a big plan abandoned in week two.
-3. **Drop into a chat per item.** Paste the box you're tackling, get it explained
-   Angular-flavored, get quizzed before checking it off.
+The point isn't to grind a checklist. It's to poke at the language until the framework
+stops looking like magic. Every topic here has an Angular tie-in written at the top of
+its file, so the plain JavaScript you write by hand always lands somewhere you already
+recognize: a closure becomes why a service holds state, the event loop becomes why
+change detection fires when it does, prototypes become what `extends` was doing all
+along.
+
+Break things on purpose. Guess the output before you run it. The surprises are the
+part worth keeping.
 
 ## Working a topic
 
