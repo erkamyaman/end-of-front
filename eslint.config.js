@@ -1,6 +1,7 @@
 import js from '@eslint/js';
 
 export default [
+  { ignores: ['playground/**'] },
   js.configs.recommended,
   {
     files: ['**/*.js'],
@@ -31,6 +32,7 @@ export default [
       'prefer-const': 'warn',
       'no-var': 'off',
       eqeqeq: 'off',
+      'no-constant-condition': 'off',
     },
   },
 ];

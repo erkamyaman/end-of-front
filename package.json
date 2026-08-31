@@ -9,7 +9,9 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "playground": "npm start --prefix playground",
+    "playground:build": "npm run build --prefix playground"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
