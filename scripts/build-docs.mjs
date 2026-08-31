@@ -50,8 +50,10 @@ function splitTopic(source) {
   return { prose, code: source.slice(match[0].length).trim() };
 }
 
+const KEEP = new Set(['.vitepress', 'public']);
+
 for (const entry of readdirSync(OUT, { withFileTypes: true })) {
-  if (entry.name === '.vitepress') continue;
+  if (KEEP.has(entry.name)) continue;
   rmSync(join(OUT, entry.name), { recursive: true, force: true });
 }
 mkdirSync(join(OUT, '.vitepress'), { recursive: true });
