@@ -4,3 +4,5 @@ build
 coverage
 .DS_Store
 .angular
+docs/.vitepress/dist
+docs/.vitepress/cache

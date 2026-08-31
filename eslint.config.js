@@ -1,10 +1,10 @@
 import js from '@eslint/js';
 
 export default [
-  { ignores: ['playground/**'] },
+  { ignores: ['playground/**', 'docs/**'] },
   js.configs.recommended,
   {
-    files: ['**/*.js'],
+    files: ['**/*.js', '**/*.mjs'],
     languageOptions: {
       ecmaVersion: 2024,
       sourceType: 'module',
@@ -22,6 +22,8 @@ export default [
         queueMicrotask: 'readonly',
         structuredClone: 'readonly',
         globalThis: 'readonly',
+        URL: 'readonly',
+        URLSearchParams: 'readonly',
         process: 'readonly',
       },
     },

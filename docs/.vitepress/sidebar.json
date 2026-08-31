@@ -1,0 +1,46 @@
+[
+  {
+    "text": "Stage 1 — Core JavaScript (the stuff Angular hides from you)",
+    "link": "/stage-1-core-javascript"
+  },
+  {
+    "text": "Stage 2 — Asynchronous JavaScript",
+    "link": "/stage-2-async-javascript"
+  },
+  {
+    "text": "Stage 2.5 — Browser & DOM APIs",
+    "link": "/stage-2.5-browser-dom-apis"
+  },
+  {
+    "text": "Stage 2.7 — Modern JS Structures",
+    "link": "/stage-2.7-modern-js-structures"
+  },
+  {
+    "text": "Stage 3 — RxJS & Angular's Reactive Model",
+    "link": "/stage-3-rxjs-and-signals"
+  },
+  {
+    "text": "Stage 4 — Angular Internals",
+    "link": "/stage-4-angular-internals"
+  },
+  {
+    "text": "Stage 4.5 — Accessibility",
+    "link": "/stage-4.5-accessibility"
+  },
+  {
+    "text": "Stage 5 — Rendering Models",
+    "link": "/stage-5-rendering-models"
+  },
+  {
+    "text": "Stage 6 — Testing",
+    "link": "/stage-6-testing"
+  },
+  {
+    "text": "Stage 7 — Architecture",
+    "link": "/stage-7-architecture"
+  },
+  {
+    "text": "Stage 8 — Extra Angular Feature Areas",
+    "link": "/stage-8-angular-feature-areas"
+  }
+]
