@@ -1,7 +1,7 @@
 /**
- * Promises — states, chaining, .then/.catch/.finally, Promise.all/allSettled/race.
+ * Promises: states, chaining, .then/.catch/.finally, Promise.all/allSettled/race.
  *
- * Angular tie-in: HttpClient returns Observables, not Promises — knowing Promises
+ * Angular tie-in: HttpClient returns Observables, not Promises. Knowing Promises
  * well is what lets you correctly use firstValueFrom/lastValueFrom to bridge the
  * two instead of guessing.
  */

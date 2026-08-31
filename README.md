@@ -1,12 +1,15 @@
 # end-of-front
 
 [![CI](https://github.com/erkamyaman/end-of-front/actions/workflows/ci.yml/badge.svg)](https://github.com/erkamyaman/end-of-front/actions/workflows/ci.yml)
+[![Docs](https://github.com/erkamyaman/end-of-front/actions/workflows/pages.yml/badge.svg)](https://erkamyaman.github.io/end-of-front/)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff)
 ![Angular](https://img.shields.io/badge/Angular-DD0031?logo=angular&logoColor=fff)
 ![Node.js](https://img.shields.io/badge/Node.js-5FA04E?logo=nodedotjs&logoColor=fff)
 ![Prettier](https://img.shields.io/badge/Prettier-F7B93E?logo=prettier&logoColor=000)
 ![ESLint](https://img.shields.io/badge/ESLint-4B32C3?logo=eslint&logoColor=fff)
+
+**Read it as a site: [erkamyaman.github.io/end-of-front](https://erkamyaman.github.io/end-of-front/)**
 
 Having fun with JS/TS and their connection with Angular. A staged path through the
 fundamentals that framework work lets you skip, one file per topic, each opening with
@@ -67,3 +70,34 @@ npm run format    # prettier
 
 `jsconfig.json` turns on `checkJs`, so the editor type-checks plain `.js` with no
 build step. `.vscode/` carries format-on-save and the two extension recommendations.
+
+## Docs site
+
+Everything in `stage-*/` is published to
+[erkamyaman.github.io/end-of-front](https://erkamyaman.github.io/end-of-front/) with a
+sidebar, search, and syntax highlighting.
+
+`scripts/build-docs.mjs` reads each topic file, takes the header comment as prose and
+the code beneath it as a highlighted block, and writes one markdown page per stage.
+The `.js` files stay the single source of truth, so the docs can't drift from the
+code. A file with code under its header counts as written; one with only the header
+is still a todo, and the homepage tallies both.
+
+```
+npm run docs:dev    # localhost:5173, live reload
+npm run docs:build
+npm run docs        # regenerate the markdown only
+```
+
+Pushing to `main` rebuilds and redeploys the site automatically.
+
+## The playground
+
+`playground/` is a plain Angular app for the topics that can't live in a `.js` file:
+change detection, DI, lifecycle, hydration, guards. It has its own `package.json` and
+is excluded from the root Prettier, ESLint, and test setup.
+
+```
+npm run playground        # ng serve
+npm run playground:build
+```

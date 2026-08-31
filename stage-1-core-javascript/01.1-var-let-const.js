@@ -1,14 +1,14 @@
 /**
- * var / let / const — three ways to declare, three different scoping rules.
+ * var / let / const: three ways to declare, three different scoping rules.
  * var is function-scoped and hoisted as undefined; let and const are block-scoped
  * and unusable before their declaration line.
  *
  * Angular tie-in: const by default in components and services, let only when the
- * value genuinely changes — the same discipline TypeScript's readonly and Angular's
+ * value genuinely changes. The same discipline TypeScript's readonly and Angular's
  * OnPush both lean on: fewer things that can change means fewer things to re-check.
  */
 
-// Behavior                     | var               | let            | const
+// Behaviour                    | var               | let            | const
 // -----------------------------|-------------------|----------------|----------------
 // Scope                        | function/global   | block          | block
 // Initialization               | optional          | optional       | required

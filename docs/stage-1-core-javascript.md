@@ -1,6 +1,6 @@
-# Stage 1 — Core JavaScript (the stuff Angular hides from you)
+# Stage 1: Core JavaScript (the stuff Angular hides from you)
 
-## Scope & closures — why a function "remembers" variables after it returns.
+## Scope & closures: why a function "remembers" variables after it returns.
 
 <Badge type="tip" text="done" />
 
@@ -54,16 +54,16 @@ function outerFunction() {
 outerFunction();
 ```
 
-## var / let / const — three ways to declare, three different scoping rules. var is function-scoped and hoisted as undefined; let and const are block-scoped and unusable before their declaration line.
+## var / let / const: three ways to declare, three different scoping rules. var is function-scoped and hoisted as undefined; let and const are block-scoped and unusable before their declaration line.
 
 <Badge type="tip" text="done" />
 
 `01.1-var-let-const.js`
 
-Angular tie-in: const by default in components and services, let only when the value genuinely changes — the same discipline TypeScript's readonly and Angular's OnPush both lean on: fewer things that can change means fewer things to re-check.
+Angular tie-in: const by default in components and services, let only when the value genuinely changes. The same discipline TypeScript's readonly and Angular's OnPush both lean on: fewer things that can change means fewer things to re-check.
 
 ```js
-// Behavior                     | var               | let            | const
+// Behaviour                    | var               | let            | const
 // -----------------------------|-------------------|----------------|----------------
 // Scope                        | function/global   | block          | block
 // Initialization               | optional          | optional       | required
@@ -124,7 +124,7 @@ function tdzDemo() {
 tdzDemo();
 ```
 
-## Class fields vs variables — `this.x` is a property on an object, not a variable.
+## Class fields vs variables: `this.x` is a property on an object, not a variable.
 
 <Badge type="tip" text="done" />
 
@@ -132,7 +132,7 @@ tdzDemo();
 
 var/let/const create a binding in a scope. A class field creates a property on the instance. They are different mechanisms with different lifetimes, and that is why one is reached by name and the other only through `this`.
 
-Angular tie-in: every `this.count`, `this.http`, `this.form` in a component is a property lookup on the instance — which is why losing `this` in a callback breaks it, and why arrow functions became the default in component code.
+Angular tie-in: every `this.count`, `this.http`, `this.form` in a component is a property lookup on the instance, which is why losing `this` in a callback breaks it, and why arrow functions became the default in component code.
 
 ```js
 /**
@@ -163,8 +163,8 @@ a.increment();
 a.increment();
 b.increment();
 
-console.log(a.count, b.count); // 2 1 — separate objects, separate properties
-console.log(a.increment().local); // 1 every time — the local dies each call
+console.log(a.count, b.count); // 2 1, separate objects, separate properties
+console.log(a.increment().local); // 1 every time. The local dies each call
 
 /**
  * Why `this.` is not optional.
@@ -189,7 +189,7 @@ try {
 }
 
 /**
- * Losing `this` — the setup for 02-this-binding.js.
+ * Losing `this`: the setup for 02-this-binding.js.
  *
  * Because `this.count` resolves through `this`, anything that changes what `this`
  * points at breaks the lookup. Passing a method as a bare callback does exactly that:
@@ -223,7 +223,7 @@ console.log((() => a.increment()).call(null).count); // works: arrow closes over
  */
 ```
 
-## Scope, the simple version — every { } is a box.
+## Scope, the simple version: every { } is a box.
 
 <Badge type="tip" text="done" />
 
@@ -237,7 +237,7 @@ That is why the same `const` can look global, function scoped, or tightly scoped
 
 See 01.1-var-let-const.js for the reassignment and temporal-dead-zone differences.
 
-Angular tie-in: a value declared in ngOnInit dies with it, a class field lives as long as the component, and a value in a service lives as long as the injector — same rule, three box sizes.
+Angular tie-in: a value declared in ngOnInit dies with it, a class field lives as long as the component, and a value in a service lives as long as the injector. same rule, three box sizes.
 
 ```js
 const fileBox = 'declared at the top level of the file';
@@ -253,7 +253,7 @@ function boxes() {
     console.log(ifBox);
   }
 
-  // console.log(ifBox); // ReferenceError — looking inward is blocked
+  // console.log(ifBox); // ReferenceError, looking inward is blocked
 }
 
 boxes();
@@ -329,7 +329,7 @@ const next = makeCounter();
 console.log(next(), next(), next()); // 1 2 3
 ```
 
-## this binding — regular functions vs arrow functions.
+## this binding: regular functions vs arrow functions.
 
 <Badge type="info" text="todo" />
 
@@ -337,7 +337,7 @@ console.log(next(), next(), next()); // 1 2 3
 
 Angular tie-in: why arrow functions are the default in component callbacks and template event bindings.
 
-## Prototypes & prototypal inheritance — how JS objects actually share behavior.
+## Prototypes & prototypal inheritance: how JS objects actually share behaviour.
 
 <Badge type="info" text="todo" />
 
@@ -345,15 +345,15 @@ Angular tie-in: why arrow functions are the default in component callbacks and t
 
 Angular tie-in: what extends on a base component class is really doing underneath.
 
-## The event loop, call stack, microtasks vs macrotasks — the concept that makes async click.
+## The event loop, call stack, microtasks vs macrotasks: the concept that makes async click.
 
 <Badge type="info" text="todo" />
 
 `04-event-loop-call-stack-microtasks.js`
 
-Angular tie-in: why change detection sometimes runs "late" relative to when you expect — Zone.js patches into this exact mechanism.
+Angular tie-in: why change detection sometimes runs "late" relative to when you expect. Zone.js patches into this exact mechanism.
 
-## Hoisting & variable declarations — var/let/const, temporal dead zone.
+## Hoisting & variable declarations: var/let/const, temporal dead zone.
 
 <Badge type="info" text="todo" />
 
@@ -361,15 +361,15 @@ Angular tie-in: why change detection sometimes runs "late" relative to when you 
 
 Angular tie-in: why class fields must be declared before they're used in a constructor, and TDZ bugs in component initialization order.
 
-## Type coercion vs casting — implicit vs explicit, equality algorithms (== vs === vs Object.is).
+## Type coercion vs casting: implicit vs explicit, equality algorithms (== vs === vs Object.is).
 
 <Badge type="info" text="todo" />
 
 `06-type-coercion-vs-casting.js`
 
-Angular tie-in: truthy/falsy coercion inside *ngIf — why *ngIf="0" and *ngIf="''" both hide the element.
+Angular tie-in: truthy/falsy coercion inside *ngIf, why *ngIf="0" and *ngIf="''" both hide the element.
 
-## Variable naming rules & scope levels — block/function/global scope.
+## Variable naming rules & scope levels: block/function/global scope.
 
 <Badge type="info" text="todo" />
 
@@ -377,7 +377,7 @@ Angular tie-in: truthy/falsy coercion inside *ngIf — why *ngIf="0" and *ngIf="
 
 Angular tie-in: component instance scope (this.x) vs template-local scope (let item of items, #templateRef).
 
-## typeof operator & built-in objects — what typeof returns for each type.
+## typeof operator & built-in objects: what typeof returns for each type.
 
 <Badge type="info" text="todo" />
 
@@ -385,39 +385,39 @@ Angular tie-in: component instance scope (this.x) vs template-local scope (let i
 
 Angular tie-in: defensive typeof checks in services before touching an API response shape you don't fully trust.
 
-## JSON & structured data — JSON.stringify/parse, what survives serialization.
+## JSON & structured data: JSON.stringify/parse, what survives serialization.
 
 <Badge type="info" text="todo" />
 
 `09-json-and-structured-data.js`
 
-Angular tie-in: HttpClient auto-parses JSON for you — know what breaks that (non-JSON responses, responseType mismatches), and manual JSON handling for localStorage.
+Angular tie-in: HttpClient auto-parses JSON for you. Know what breaks that (non-JSON responses, responseType mismatches), and manual JSON handling for localStorage.
 
-## Control flow — if/else, switch, try/catch/finally, throw, Error objects.
+## Control flow: if/else, switch, try/catch/finally, throw, Error objects.
 
 <Badge type="info" text="todo" />
 
 `10-control-flow.js`
 
-Angular tie-in: *ngIf/*ngSwitch are template-level mirrors of this — and HttpErrorResponse handling in services is just try/catch with extra shape.
+Angular tie-in: *ngIf/*ngSwitch are template-level mirrors of this, and HttpErrorResponse handling in services is just try/catch with extra shape.
 
-## Loops & iteration — for, while, do...while, for...of, for...in, break/continue.
+## Loops & iteration: for, while, do...while, for...of, for...in, break/continue.
 
 <Badge type="info" text="todo" />
 
 `11-loops-and-iteration.js`
 
-Angular tie-in: *ngFor/@for is sugar over for...of — understanding the real loop explains why trackBy matters for performance.
+Angular tie-in: *ngFor/@for is sugar over for...of. Understanding the real loop explains why trackBy matters for performance.
 
-## Operators — arithmetic, comparison, logical, bitwise, assignment, unary, comma, ternary, BigInt.
+## Operators: arithmetic, comparison, logical, bitwise, assignment, unary, comma, ternary, BigInt.
 
 <Badge type="info" text="todo" />
 
 `12-operators.js`
 
-Angular tie-in: Angular templates only allow a restricted operator subset (no bitwise, no comma, no assignment) — knowing the full JS operator set shows you exactly what template expressions are missing and why.
+Angular tie-in: Angular templates only allow a restricted operator subset (no bitwise, no comma, no assignment). Knowing the full JS operator set shows you exactly what template expressions are missing and why.
 
-## Function parameter patterns — default params, rest params, arguments object, IIFEs.
+## Function parameter patterns: default params, rest params, arguments object, IIFEs.
 
 <Badge type="info" text="todo" />
 
@@ -425,23 +425,23 @@ Angular tie-in: Angular templates only allow a restricted operator subset (no bi
 
 Angular tie-in: default values on service method params, and why @Input() properties often need explicit defaults since Angular won't infer them for you.
 
-## Explicit binding & function borrowing — call/apply/bind.
+## Explicit binding & function borrowing: call/apply/bind.
 
 <Badge type="info" text="todo" />
 
 `14-explicit-binding-and-function-borrowing.js`
 
-Angular tie-in: the classic bug of passing this.someMethod as a callback and losing this — the actual mechanism behind why arrow functions or .bind(this) fix it.
+Angular tie-in: the classic bug of passing this.someMethod as a callback and losing this. The actual mechanism behind why arrow functions or .bind(this) fix it.
 
-## Primitive data types — string/number/boolean/null/undefined/bigint/Symbol as a category, and primitive-vs-reference semantics.
+## Primitive data types: string/number/boolean/null/undefined/bigint/Symbol as a category, and primitive-vs-reference semantics.
 
 <Badge type="info" text="todo" />
 
 `15-primitive-data-types.js`
 
-Angular tie-in: why OnPush change detection compares primitives by value but objects/arrays by reference — this is the exact concept underneath that gotcha.
+Angular tie-in: why OnPush change detection compares primitives by value but objects/arrays by reference. This is the exact concept underneath that gotcha.
 
-## Recursion — a function calling itself, base case + recursive case.
+## Recursion: a function calling itself, base case + recursive case.
 
 <Badge type="info" text="todo" />
 

@@ -1,4 +1,4 @@
 /**
- * Custom directives & structural directives — attribute directives, ViewContainerRef,
+ * Custom directives & structural directives: attribute directives, ViewContainerRef,
  * dynamic component creation.
  */

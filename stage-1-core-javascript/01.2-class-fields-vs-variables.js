@@ -1,12 +1,12 @@
 /**
- * Class fields vs variables — `this.x` is a property on an object, not a variable.
+ * Class fields vs variables: `this.x` is a property on an object, not a variable.
  *
  * var/let/const create a binding in a scope. A class field creates a property on the
  * instance. They are different mechanisms with different lifetimes, and that is why
  * one is reached by name and the other only through `this`.
  *
  * Angular tie-in: every `this.count`, `this.http`, `this.form` in a component is a
- * property lookup on the instance — which is why losing `this` in a callback breaks
+ * property lookup on the instance, which is why losing `this` in a callback breaks
  * it, and why arrow functions became the default in component code.
  */
 
@@ -38,8 +38,8 @@ a.increment();
 a.increment();
 b.increment();
 
-console.log(a.count, b.count); // 2 1 — separate objects, separate properties
-console.log(a.increment().local); // 1 every time — the local dies each call
+console.log(a.count, b.count); // 2 1, separate objects, separate properties
+console.log(a.increment().local); // 1 every time. The local dies each call
 
 /**
  * Why `this.` is not optional.
@@ -64,7 +64,7 @@ try {
 }
 
 /**
- * Losing `this` — the setup for 02-this-binding.js.
+ * Losing `this`: the setup for 02-this-binding.js.
  *
  * Because `this.count` resolves through `this`, anything that changes what `this`
  * points at breaks the lookup. Passing a method as a bare callback does exactly that:

@@ -1,4 +1,4 @@
 /**
- * App/route initialization & guards — application/environment initializers, route
+ * App/route initialization & guards: application/environment initializers, route
  * guards, resolvers, HttpInterceptors.
  */

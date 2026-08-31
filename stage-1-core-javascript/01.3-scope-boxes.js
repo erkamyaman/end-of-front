@@ -1,5 +1,5 @@
 /**
- * Scope, the simple version — every { } is a box.
+ * Scope, the simple version: every { } is a box.
  *
  * "block scoped" answers one question only: which box does this declaration live in?
  * The nearest { } around it. It says nothing about how far inward the name reaches.
@@ -14,7 +14,7 @@
  * See 01.1-var-let-const.js for the reassignment and temporal-dead-zone differences.
  *
  * Angular tie-in: a value declared in ngOnInit dies with it, a class field lives as
- * long as the component, and a value in a service lives as long as the injector —
+ * long as the component, and a value in a service lives as long as the injector.
  * same rule, three box sizes.
  */
 
@@ -31,7 +31,7 @@ function boxes() {
     console.log(ifBox);
   }
 
-  // console.log(ifBox); // ReferenceError — looking inward is blocked
+  // console.log(ifBox); // ReferenceError, looking inward is blocked
 }
 
 boxes();

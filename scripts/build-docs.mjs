@@ -103,7 +103,7 @@ const home = [
   'layout: home',
   'hero:',
   '  name: end-of-front',
-  '  text: JS/TS fundamentals, Angular-flavored',
+  '  text: JS/TS fundamentals, Angular-flavoured',
   '  tagline: Having fun with JS/TS and their connection with Angular',
   'features:',
   ...index.map((s) =>
