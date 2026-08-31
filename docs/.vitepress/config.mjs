@@ -6,9 +6,11 @@ export default {
   title: 'end-of-front',
   description: 'Having fun with JS/TS and their connection with Angular',
   base: '/end-of-front/',
+  head: [['link', { rel: 'icon', type: 'image/svg+xml', href: '/end-of-front/favicon.svg' }]],
   cleanUrls: true,
   lastUpdated: true,
   themeConfig: {
+    logo: '/favicon.svg',
     nav: [
       { text: 'Stages', link: sidebar[0].items[0].link },
       { text: 'GitHub', link: 'https://github.com/erkamyaman/end-of-front' },
