@@ -1,8 +1,16 @@
 # end-of-front
 
-A staged path through the JavaScript and Angular fundamentals that framework work
-lets you skip. One file per topic, each opening with what the topic is and its
-Angular tie-in. Write the code by hand.
+[![CI](https://github.com/erkamyaman/end-of-front/actions/workflows/ci.yml/badge.svg)](https://github.com/erkamyaman/end-of-front/actions/workflows/ci.yml)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff)
+![Angular](https://img.shields.io/badge/Angular-DD0031?logo=angular&logoColor=fff)
+![Node.js](https://img.shields.io/badge/Node.js-5FA04E?logo=nodedotjs&logoColor=fff)
+![Prettier](https://img.shields.io/badge/Prettier-F7B93E?logo=prettier&logoColor=000)
+![ESLint](https://img.shields.io/badge/ESLint-4B32C3?logo=eslint&logoColor=fff)
+
+Having fun with JS/TS and their connection with Angular. A staged path through the
+fundamentals that framework work lets you skip, one file per topic, each opening with
+what the topic is and where it shows up in Angular. Written by hand, on purpose.
 
 ## Stages
 
